@@ -19,6 +19,14 @@ h1, h2, h3, p, li {
   margin: 0;
 }
 
+h1 {
+  font-size: 1.75rem;
+}
+
+li {
+  font-size: 1.25rem;
+}
+
 button {
   background-color: #1993d3;
   color: #fff;
@@ -38,12 +46,46 @@ button {
   padding: 1rem;
 }
 
-#sidebar {
+div#sidebar {
   grid-row: 1 / -1;
   background-color: #1993d3;
   color: white;
   display: grid;
   grid-template-rows: 1fr 4fr 5fr;
+  padding-left: 0.5rem;
+}
+
+#sidebar-heading {
+  padding-bottom: 40px;
+}
+
+#sidebar-heading,
+#sidebar li {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  align-items: center;
+}
+
+#sidebar li {
+  padding: 0.75rem 0;
+}
+
+#sidebar-heading :first-child,
+#sidebar li :first-child {
+  justify-self: center;
+}
+
+.dashboard-icon,
+.nav-icon {
+  filter: invert(81%) sepia(100%) saturate(13%) hue-rotate(169deg) brightness(111%) contrast(103%);
+}
+
+.dashboard-icon {
+  height: 50px;
+}
+
+.nav-icon {
+  height: 25px;
 }
 
 #header {
