@@ -15,7 +15,7 @@ ul, ol, li {
   padding: 0;
 }
 
-h1, h2, h3, h4, p, li {
+h1, h2, h3, h4, h5, p, li {
   margin: 0;
 }
 
@@ -36,7 +36,7 @@ button {
   color: #fff;
   border: none;
   border-radius: 1.5rem;
-  width: 90px;
+  width: 100px;
   height: 40px;
   font-size: 1rem;
 }
@@ -209,7 +209,9 @@ div#main-content {
   margin-bottom: 5px;
 }
 
-#project-cards p, #announcement-card p {
+#project-cards p,
+#announcement-card p,
+#trending-card span {
   color: #686868;
 }
 
@@ -244,4 +246,26 @@ div#main-content {
   display: grid;
   grid-template-rows: 30px 1fr;
   padding-top: 1rem;
+}
+
+#trending-card {
+  row-gap: 10px;
+}
+
+#trending-card > div {
+  display: grid;
+  grid: repeat(2, 1fr) / 75px 1fr;
+}
+
+#trending-card img {
+  grid-row: 1 / -1;
+  align-self: center;
+}
+
+#trending-card > div > :nth-child(2) {
+  align-self: end;
+}
+
+#trending-card > div > :nth-child(3) {
+  align-self: start;
 }
