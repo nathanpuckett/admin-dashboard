@@ -23,6 +23,10 @@ h1 {
   font-size: 1.75rem;
 }
 
+h2 {
+  font-size: 1.35em;
+}
+
 li {
   font-size: 1.25rem;
 }
@@ -93,10 +97,21 @@ div#header {
   display: grid;
   grid: 1fr 2fr / 5fr 3fr;
   padding: 1rem 3rem;
+  row-gap: 25px;
 }
 
 .header-icon {
   height: 25px;
+}
+
+.avatar-small {
+  border-radius: 50%;
+  height: 50px;
+}
+
+.avatar-large {
+  border-radius: 50%;
+  height: 75px;
 }
 
 #search-bar {
@@ -113,22 +128,30 @@ div#header {
 }
 
 #user-info {
-  /*
-  display: grid;
-  grid-template-columns: 1fr 1fr 3fr;
-  */
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
+  padding-left: 70px;
+  padding-right: 20px;
+  align-items: center;
 }
 
 #header-greeting {
   display: grid;
-  grid: 1fr 2fr / 1fr 5fr;
-  align-items: center;
+  grid: 3fr 4fr / 1fr 5fr;
 }
 
-#header-greeting .pic {
+#header-greeting :first-child {
   grid-row: 1 / -1;
+  align-self: center;
+  justify-self: center;
+}
+
+#header-greeting :nth-child(2) {
+  align-self: end;
+}
+
+#header-greeting :nth-child(3) {
+  align-self: start;
 }
 
 #header-buttons {
@@ -146,6 +169,8 @@ div#main-content {
   display: grid;
   grid: repeat(2, 1fr) / 3fr 1fr;
   padding: 2rem 0.75rem;
+  box-shadow: inset 0px 5px 5px #ccc;
+
 }
 
 #main-content h2 {
