@@ -15,7 +15,7 @@ ul, ol, li {
   padding: 0;
 }
 
-h1, h2, h3, p, li {
+h1, h2, h3, h4, p, li {
   margin: 0;
 }
 
@@ -96,8 +96,8 @@ div#sidebar {
 div#header {
   display: grid;
   grid: 1fr 2fr / 5fr 3fr;
-  padding: 1rem 3rem;
-  row-gap: 25px;
+  padding: 1rem 3rem 0.5rem 3rem;
+  row-gap: 20px;
 }
 
 .header-icon {
@@ -209,7 +209,7 @@ div#main-content {
   margin-bottom: 5px;
 }
 
-#project-cards p {
+#project-cards p, #announcement-card p {
   color: #686868;
 }
 
@@ -226,6 +226,18 @@ div#main-content {
 #announcements {
   display: grid;
   grid-template-rows: 30px 1fr;
+}
+
+#announcement-card > div {
+  padding: 1rem 0.5rem;
+}
+
+#announcement-card > :nth-child(-n+2) {
+  border-bottom: 1px solid #ccc;
+}
+
+#announcement-card p {
+  font-size: 0.75rem;
 }
 
 #trending {
